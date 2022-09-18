@@ -5,7 +5,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <title>Add a Staff</title>
+    <title>Update Price</title>
     <meta charset="UTF-8">
 
     <link rel="stylesheet" type="text/css">
@@ -145,51 +145,28 @@ form .button input:hover {
     <div class="container">
 
 
-        <div class="title">Sender Details</div>
+        <div class="title">Update Price</div>
         <div class="content">
             <?php
-        if($sender){
-            while ($row = $sender->fetch_assoc()) {
+        if($price){
+            while ($row = $price->fetch_assoc()) {
             
         ?>
-           
+           <form action="<?= $base_url ?>?r=price" method="post">
                 <div class="user-details">
-                <div class="input-box">
-                        <span class="details">User ID</span>
-                        <input type="text" name="name" value=<?php echo $row['id'] ?> readonly>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Full Name</span>
-                        <input type="text" name="name" value=<?php echo $row['name'] ?> readonly>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Username</span>
-                        <input type="text" name="username" value=<?php echo $row['username'] ?> readonly>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Email</span>
-                        <input type="text" name="email" value=<?php echo $row['email'] ?> readonly>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Phone Number</span>
-                        <input type="text" name="phone" value=<?php echo $row['phone'] ?> readonly>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Address</span>
-                        <input type="text" name="address" value=<?php echo $row['address'] ?> readonly>
-                    </div>
-
-                    <div class="input-box">
-                        <span class="details">gender</span>
-                        <input type="text" name="address" value=<?php echo $row['gender'] ?> readonly>
-                    </div>
-
+                
+                        <span class="details">S.N</span>
+                        <input type="text" name="name" value=<?php echo $row['sn'] ?>>
+                        <span class="details">Weight</span>
+                        <input type="text" name="name" value=<?php echo $row['weight'] ?>>
+                   
 
 
                        
                     </div>
 
 
+            </form>
        <?php }} ?> 
         </div>
     </div>

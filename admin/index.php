@@ -76,6 +76,10 @@ if (isset($_GET['r'])) {
             $_SESSION['active_url'] = 'approvestaff';
             include 'controller/approvestaffcontroller.php';
             break;
+        case 'price':
+            $_SESSION['active_url'] = 'price';
+            include 'controller/pricecontroller.php';
+            break;
         default :
             throwError(404, 'Requested page does not exists.');
             break;

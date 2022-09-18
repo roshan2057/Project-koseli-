@@ -242,7 +242,7 @@ input[type="file"] {
     <td>Items Image:</td>
     <span id='error' style="color: red;"></span>
 
-    <td><input type="file" name="simg" id="FilUploader" onfocus="file()"></td>
+    <td><input type="file" accept=".jpeg,.png" name="simg" id="FilUploader" onfocus="file()"></td>
     </tr>
     <tr>
         <td colspan="4" align="center">

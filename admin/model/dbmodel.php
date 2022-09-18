@@ -315,7 +315,20 @@ else
 
 }
 
-
+function price()
+{
+    $conn= db_connect();
+    $sql ="SELECT * FROM price";
+    $result = $conn->query($sql);
+    $conn->close();
+    if($result)
+    {
+        return $result;
+    }
+    else{
+        return false;
+    }
+}
 
 
 

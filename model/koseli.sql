@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 21, 2022 at 06:58 PM
+-- Generation Time: Aug 05, 2022 at 04:26 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -99,7 +99,6 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`id`, `name`, `username`, `password`, `email`, `phone`, `address`, `gender`) VALUES
-(0, 'None', '', '', '', '', '', ''),
 (1, 'Roshan Karki', 'roshan21', '11223344', 'roshan21@gmail.com', '9865354145', 'khairahani-13Gawai', 'Male'),
 (2, 'Sabik Bhandari', 'sabik20', '11223344', 'sabik20@gmail.com', '9845762145', 'Ratnagartandi', 'Male'),
 (3, 'Shristy Thapa', 'shristy23', '11223344', 'shristy23@gmail.com', '9896541235', 'ParsaChitwan', 'Female');
@@ -149,8 +148,7 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `courier`
   ADD PRIMARY KEY (`oid`),
-  ADD KEY `uid` (`uid`),
-  ADD KEY `sid` (`sid`);
+  ADD KEY `uid` (`uid`);
 
 --
 -- Indexes for table `staff`
@@ -184,7 +182,7 @@ ALTER TABLE `courier`
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -200,8 +198,7 @@ ALTER TABLE `user`
 -- Constraints for table `courier`
 --
 ALTER TABLE `courier`
-  ADD CONSTRAINT `courier_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `user` (`id`),
-  ADD CONSTRAINT `courier_ibfk_2` FOREIGN KEY (`sid`) REFERENCES `staff` (`id`);
+  ADD CONSTRAINT `courier_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `user` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

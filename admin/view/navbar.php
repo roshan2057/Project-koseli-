@@ -71,6 +71,12 @@
                             </span>
                             <span>Add Delivery Person</span></a>
                     </li>
+                    <!-- <li>
+                        <a href="<?= $base_url ?>?r=price"><span class="icon">
+                                <ion-icon name="person-add-sharp"></ion-icon>
+                            </span>
+                            <span>Update Price</span></a>
+                    </li> -->
                     <li>
                         <a href="<?= $base_url ?>?r=staff"><span class="icon">
                                 <ion-icon name="people-sharp"></ion-icon>

@@ -41,10 +41,15 @@
 
 function username_validate(){
     var uname = document.forms["form"]["username"].value;
+    var format=/^[a-zA-Z]+/;
     if (uname.trim() == "") {
         document.getElementById('uerror').innerHTML = "UserName required";
        
-    } else {
+    } else if (!format.test(uname)) {
+        document.getElementById('uerror').innerHTML = "username should start with alphabate";
+    }
+    else
+    {
         document.getElementById('uerror').innerHTML = "";
         
     }
